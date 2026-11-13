@@ -12,3 +12,7 @@ jobs:
   guard:
     uses: armbrain-io/.github/.github/workflows/main-guard.yml@main
     secrets: inherit
+    with:
+      # Public repository: run on GitHub-hosted machines, never the org's
+      # self-hosted runners (Council 1223.4b).
+      runs_on: '["ubuntu-latest"]'
